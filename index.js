@@ -1,10 +1,10 @@
-const incrementBtn = document.getElementById('increment-btn')
-const countDisplay = document.getElementById('count-display')
+const reactContentRoot = document.getElementById("root")
+const myFirstELement = React.createElement(
+    "ul",
+    null,
+    [React.createElement('li', null, 'item1'), 
+    React.createElement('li', null, 'item2'),
+    React.createElement('li', null, 'item3')]
+    )
 
-let currentCount = 0
-
-incrementBtn.addEventListener('click', ()=>{
-    currentCount++
-    countDisplay.innerText = currentCount
-
-})
+ReactDOM.render(myFirstELement, reactContentRoot)
