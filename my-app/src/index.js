@@ -1,3 +1,6 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
+
 const reactContentRoot = document.getElementById("root")
 // const myFirstELement = React.createElement(
 //     "ul",
@@ -6,8 +9,6 @@ const reactContentRoot = document.getElementById("root")
 //     React.createElement('li', null, 'item2'),
 //     React.createElement('li', null, 'item3')]
 //     )
-
-
 
 const App = () =>{
     const myItem = "Gordon"
