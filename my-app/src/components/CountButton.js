@@ -1,19 +1,18 @@
 import React, {useState} from "react"
 
-const CountButton = () =>{
+const CountButton = (props) =>{
     //useState return an array, [defulatValue, stateFunction]
     //is to tell React the currentCount is a state and we want to keep tarack it
     //and re-render it once it updated
     const [currentCount, setCurrentCount] = useState(0)
 
     const handleClick = () =>{
-        setCurrentCount(currentCount+1)
+        setCurrentCount(currentCount+ props.incrementBy)
     }
     
-    console.log("Component re-rendered")
     return <div>
         <button onClick={handleClick}>
-            +1
+            +{props.incrementBy}
         </button>
         <div>{currentCount}</div>
     </div>
