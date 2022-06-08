@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-
+import './CountButton.css'
 const CountButton = (props) =>{
     //useState return an array, [defulatValue, stateFunction]
     //is to tell React the currentCount is a state and we want to keep tarack it
@@ -19,7 +19,7 @@ const CountButton = (props) =>{
         <button style = {buttonStyles} onClick={handleClick}>
             +{props.incrementBy}
         </button>
-        <div>{currentCount}</div>
+        <div className={"count-display"}>{currentCount}</div>
     </div>
 }
 
