@@ -7,12 +7,17 @@ const reactContentRoot = document.getElementById("root")
 //     React.createElement('li', null, 'item3')]
 //     )
 
-const myJSXElement = (
-    <ul>
-        <li>item1</li>
-        <li>item2</li>
-    </ul>
 
-)
 
-ReactDOM.render(myJSXElement, reactContentRoot)
+const App = () =>{
+    const myItem = "Gordon"
+    return(
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>{myItem.toUpperCase()}</li>
+        </ul>
+    )
+}
+
+ReactDOM.render(<App />, reactContentRoot)
