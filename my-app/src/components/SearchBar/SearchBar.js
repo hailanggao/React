@@ -20,7 +20,6 @@ const SearchBar=(props)=>{
     })
 
     const shouldDisplayButton = searchValue.length > 0
-    console.log(shouldDisplayButton)
     return <div>
         <input type="text" value={searchValue} onChange={handleInputChange}/>
         {shouldDisplayButton && <button onClick={handleClearClick}>clear</button>}
