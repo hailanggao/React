@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import './CountButton.css'
 const CountButton = (props) =>{
     //useState return an array, [defulatValue, stateFunction]
@@ -10,6 +10,14 @@ const CountButton = (props) =>{
         setCurrentCount(currentCount+ props.incrementBy)
     }
     
+    //useEffect(()=>{}, [])
+    useEffect (()=>{
+        if(currentCount === 10){
+            setCurrentCount(0)
+            alert("CurrentCount is restted to 0")
+        }
+    }, [currentCount])
+
     const buttonStyles = {
         background: props.buttonColor,
         borderRadius: props.borderRadius
